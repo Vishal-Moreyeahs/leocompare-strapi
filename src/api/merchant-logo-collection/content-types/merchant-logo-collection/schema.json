@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "merchant_logo_collections",
+  "info": {
+    "singularName": "merchant-logo-collection",
+    "pluralName": "merchant-logo-collections",
+    "displayName": "MerchantLogoCollection"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "MerchantLogos": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    }
+  }
+}

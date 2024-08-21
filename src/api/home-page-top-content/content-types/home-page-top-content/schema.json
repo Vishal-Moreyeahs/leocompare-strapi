@@ -1,0 +1,28 @@
+{
+  "kind": "singleType",
+  "collectionName": "home_page_top_contents",
+  "info": {
+    "singularName": "home-page-top-content",
+    "pluralName": "home-page-top-contents",
+    "displayName": "HomePageTopContent"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "HeadingText": {
+      "type": "text",
+      "required": true,
+      "maxLength": 150,
+      "private": true,
+      "unique": false,
+      "minLength": 10
+    },
+    "HeadingContent": {
+      "type": "text",
+      "required": true,
+      "maxLength": 150
+    }
+  }
+}

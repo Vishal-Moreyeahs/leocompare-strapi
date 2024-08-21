@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "card_content_home_pages",
+  "info": {
+    "singularName": "card-content-home-page",
+    "pluralName": "card-content-home-pages",
+    "displayName": "CardContentHomePage",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "IconLogo": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "videos"
+      ]
+    },
+    "Title": {
+      "type": "string",
+      "required": true
+    },
+    "Description": {
+      "type": "text",
+      "required": true
+    },
+    "Heading": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

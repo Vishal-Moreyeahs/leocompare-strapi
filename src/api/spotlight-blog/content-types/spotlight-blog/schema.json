@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "spotlight_blogs",
+  "info": {
+    "singularName": "spotlight-blog",
+    "pluralName": "spotlight-blogs",
+    "displayName": "SpotlightBlog"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "BlogImage": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "Time": {
+      "type": "string",
+      "required": true
+    },
+    "Title": {
+      "type": "string",
+      "required": true
+    },
+    "Description": {
+      "type": "text",
+      "minLength": 20
+    }
+  }
+}
