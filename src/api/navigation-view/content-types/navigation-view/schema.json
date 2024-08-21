@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "navigation_views",
+  "info": {
+    "singularName": "navigation-view",
+    "pluralName": "navigation-views",
+    "displayName": "NavigationView"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "PlatformLogo": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "NavigationLinkText": {
+      "type": "string",
+      "required": true
+    },
+    "NavigationLink": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

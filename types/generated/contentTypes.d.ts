@@ -967,6 +967,38 @@ export interface ApiMerchantLogoCollectionMerchantLogoCollection
   };
 }
 
+export interface ApiNavigationViewNavigationView extends Schema.CollectionType {
+  collectionName: 'navigation_views';
+  info: {
+    singularName: 'navigation-view';
+    pluralName: 'navigation-views';
+    displayName: 'NavigationView';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    PlatformLogo: Attribute.Media<'images'> & Attribute.Required;
+    NavigationLinkText: Attribute.String & Attribute.Required;
+    NavigationLink: Attribute.Text & Attribute.Required;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::navigation-view.navigation-view',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::navigation-view.navigation-view',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiSpotlightBlogSpotlightBlog extends Schema.CollectionType {
   collectionName: 'spotlight_blogs';
   info: {
@@ -1060,6 +1092,7 @@ declare module '@strapi/types' {
       'api::footer-collection.footer-collection': ApiFooterCollectionFooterCollection;
       'api::home-page-top-content.home-page-top-content': ApiHomePageTopContentHomePageTopContent;
       'api::merchant-logo-collection.merchant-logo-collection': ApiMerchantLogoCollectionMerchantLogoCollection;
+      'api::navigation-view.navigation-view': ApiNavigationViewNavigationView;
       'api::spotlight-blog.spotlight-blog': ApiSpotlightBlogSpotlightBlog;
       'api::user-feedback-collection.user-feedback-collection': ApiUserFeedbackCollectionUserFeedbackCollection;
     }
