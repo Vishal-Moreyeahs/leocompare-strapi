@@ -819,6 +819,38 @@ export interface ApiBannerCollectionBannerCollection
   };
 }
 
+export interface ApiBuyForeignCurrencyBuyForeignCurrency
+  extends Schema.CollectionType {
+  collectionName: 'buy_foreign_currencies';
+  info: {
+    singularName: 'buy-foreign-currency';
+    pluralName: 'buy-foreign-currencies';
+    displayName: 'BuyForeignCurrency';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Name: Attribute.String & Attribute.Required;
+    Link: Attribute.Text & Attribute.Required;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::buy-foreign-currency.buy-foreign-currency',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::buy-foreign-currency.buy-foreign-currency',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiCardContentHomePageCardContentHomePage
   extends Schema.CollectionType {
   collectionName: 'card_content_home_pages';
@@ -854,39 +886,125 @@ export interface ApiCardContentHomePageCardContentHomePage
   };
 }
 
-export interface ApiFooterCollectionFooterCollection
-  extends Schema.CollectionType {
-  collectionName: 'footer_collections';
+export interface ApiFooterGuideFooterGuide extends Schema.CollectionType {
+  collectionName: 'footer_guides';
   info: {
-    singularName: 'footer-collection';
-    pluralName: 'footer-collections';
-    displayName: 'FooterCollection';
+    singularName: 'footer-guide';
+    pluralName: 'footer-guides';
+    displayName: 'FooterGuides';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
-    MoneyTransfer: Attribute.String & Attribute.Required;
-    MoneyTransferLink: Attribute.Text & Attribute.Required;
-    Reviews: Attribute.Text & Attribute.Required;
-    ReviewLink: Attribute.Text & Attribute.Required;
-    Guides: Attribute.Text & Attribute.Required;
-    GuideLink: Attribute.String;
-    BuyForeignCurrency: Attribute.Text & Attribute.Required;
-    BuyForeignCurrencyLinks: Attribute.Text;
-    QuickLinksText: Attribute.Text & Attribute.Required;
-    QuickLinks: Attribute.Text;
+    Name: Attribute.String & Attribute.Required;
+    Link: Attribute.Text & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
-      'api::footer-collection.footer-collection',
+      'api::footer-guide.footer-guide',
       'oneToOne',
       'admin::user'
     > &
       Attribute.Private;
     updatedBy: Attribute.Relation<
-      'api::footer-collection.footer-collection',
+      'api::footer-guide.footer-guide',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiFooterMoneyTransferFooterMoneyTransfer
+  extends Schema.CollectionType {
+  collectionName: 'footer_money_transfers';
+  info: {
+    singularName: 'footer-money-transfer';
+    pluralName: 'footer-money-transfers';
+    displayName: 'FooterMoneyTransfer';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Name: Attribute.String & Attribute.Required;
+    Link: Attribute.Text & Attribute.Required;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::footer-money-transfer.footer-money-transfer',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::footer-money-transfer.footer-money-transfer',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiFooterQuickLinkFooterQuickLink
+  extends Schema.CollectionType {
+  collectionName: 'footer_quick_links';
+  info: {
+    singularName: 'footer-quick-link';
+    pluralName: 'footer-quick-links';
+    displayName: 'FooterQuickLinks';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Name: Attribute.String & Attribute.Required;
+    Link: Attribute.Text & Attribute.Required;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::footer-quick-link.footer-quick-link',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::footer-quick-link.footer-quick-link',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiFooterReviewFooterReview extends Schema.CollectionType {
+  collectionName: 'footer_reviews';
+  info: {
+    singularName: 'footer-review';
+    pluralName: 'footer-reviews';
+    displayName: 'FooterReviews';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Name: Attribute.String & Attribute.Required;
+    Link: Attribute.Text & Attribute.Required;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::footer-review.footer-review',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::footer-review.footer-review',
       'oneToOne',
       'admin::user'
     > &
@@ -929,6 +1047,41 @@ export interface ApiHomePageTopContentHomePageTopContent
       Attribute.Private;
     updatedBy: Attribute.Relation<
       'api::home-page-top-content.home-page-top-content',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiLeoCompareTransferSolutionLeoCompareTransferSolution
+  extends Schema.CollectionType {
+  collectionName: 'leo_compare_transfer_solutions';
+  info: {
+    singularName: 'leo-compare-transfer-solution';
+    pluralName: 'leo-compare-transfer-solutions';
+    displayName: 'LeoCompareTransferSolution';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Heading: Attribute.String & Attribute.Required;
+    LogoImg: Attribute.Media<'images', true> & Attribute.Required;
+    CardLogo: Attribute.Media<'images', true> & Attribute.Required;
+    Title: Attribute.String & Attribute.Required;
+    Description: Attribute.Text & Attribute.Required;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::leo-compare-transfer-solution.leo-compare-transfer-solution',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::leo-compare-transfer-solution.leo-compare-transfer-solution',
       'oneToOne',
       'admin::user'
     > &
@@ -992,6 +1145,39 @@ export interface ApiNavigationViewNavigationView extends Schema.CollectionType {
       Attribute.Private;
     updatedBy: Attribute.Relation<
       'api::navigation-view.navigation-view',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiPlatformBannerPlatformBanner extends Schema.CollectionType {
+  collectionName: 'platform_banners';
+  info: {
+    singularName: 'platform-banner';
+    pluralName: 'platform-banners';
+    displayName: 'PlatformBanner';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    BackgroundImg: Attribute.Media<'images', true> & Attribute.Required;
+    LogoImg: Attribute.Media<'images', true> & Attribute.Required;
+    Title: Attribute.Text & Attribute.Required;
+    Description: Attribute.Text & Attribute.Required;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::platform-banner.platform-banner',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::platform-banner.platform-banner',
       'oneToOne',
       'admin::user'
     > &
@@ -1088,11 +1274,17 @@ declare module '@strapi/types' {
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'plugin::i18n.locale': PluginI18NLocale;
       'api::banner-collection.banner-collection': ApiBannerCollectionBannerCollection;
+      'api::buy-foreign-currency.buy-foreign-currency': ApiBuyForeignCurrencyBuyForeignCurrency;
       'api::card-content-home-page.card-content-home-page': ApiCardContentHomePageCardContentHomePage;
-      'api::footer-collection.footer-collection': ApiFooterCollectionFooterCollection;
+      'api::footer-guide.footer-guide': ApiFooterGuideFooterGuide;
+      'api::footer-money-transfer.footer-money-transfer': ApiFooterMoneyTransferFooterMoneyTransfer;
+      'api::footer-quick-link.footer-quick-link': ApiFooterQuickLinkFooterQuickLink;
+      'api::footer-review.footer-review': ApiFooterReviewFooterReview;
       'api::home-page-top-content.home-page-top-content': ApiHomePageTopContentHomePageTopContent;
+      'api::leo-compare-transfer-solution.leo-compare-transfer-solution': ApiLeoCompareTransferSolutionLeoCompareTransferSolution;
       'api::merchant-logo-collection.merchant-logo-collection': ApiMerchantLogoCollectionMerchantLogoCollection;
       'api::navigation-view.navigation-view': ApiNavigationViewNavigationView;
+      'api::platform-banner.platform-banner': ApiPlatformBannerPlatformBanner;
       'api::spotlight-blog.spotlight-blog': ApiSpotlightBlogSpotlightBlog;
       'api::user-feedback-collection.user-feedback-collection': ApiUserFeedbackCollectionUserFeedbackCollection;
     }

@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "footer_quick_links",
+  "info": {
+    "singularName": "footer-quick-link",
+    "pluralName": "footer-quick-links",
+    "displayName": "FooterQuickLinks"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "required": true
+    },
+    "Link": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

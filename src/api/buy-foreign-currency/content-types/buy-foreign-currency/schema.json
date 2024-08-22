@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "buy_foreign_currencies",
+  "info": {
+    "singularName": "buy-foreign-currency",
+    "pluralName": "buy-foreign-currencies",
+    "displayName": "BuyForeignCurrency"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "required": true
+    },
+    "Link": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

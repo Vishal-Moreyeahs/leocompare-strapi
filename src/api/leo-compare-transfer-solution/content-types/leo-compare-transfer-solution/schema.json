@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "leo_compare_transfer_solutions",
+  "info": {
+    "singularName": "leo-compare-transfer-solution",
+    "pluralName": "leo-compare-transfer-solutions",
+    "displayName": "LeoCompareTransferSolution"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Heading": {
+      "type": "string",
+      "required": true
+    },
+    "LogoImg": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": true,
+      "required": true
+    },
+    "CardLogo": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": true,
+      "required": true
+    },
+    "Title": {
+      "type": "string",
+      "required": true
+    },
+    "Description": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

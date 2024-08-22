@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "footer_money_transfers",
+  "info": {
+    "singularName": "footer-money-transfer",
+    "pluralName": "footer-money-transfers",
+    "displayName": "FooterMoneyTransfer"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "required": true
+    },
+    "Link": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

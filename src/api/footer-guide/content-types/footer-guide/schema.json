@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "footer_guides",
+  "info": {
+    "singularName": "footer-guide",
+    "pluralName": "footer-guides",
+    "displayName": "FooterGuides"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "required": true
+    },
+    "Link": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "footer_reviews",
+  "info": {
+    "singularName": "footer-review",
+    "pluralName": "footer-reviews",
+    "displayName": "FooterReviews"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "required": true
+    },
+    "Link": {
+      "type": "text",
+      "required": true
+    }
+  }
+}
